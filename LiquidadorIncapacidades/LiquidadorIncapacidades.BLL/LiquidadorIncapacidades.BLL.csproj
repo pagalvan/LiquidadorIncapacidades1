@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{946B21B2-5E1D-4451-9FA8-921152945EAE}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>LiquidadorIncapacidades.BLL</RootNamespace>
     <AssemblyName>LiquidadorIncapacidades.BLL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="IIncapacidadService.cs" />
+    <Compile Include="IncapacidadService.cs" />
+    <Compile Include="IncapacidadServiceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LiquidadorIncapacidades.DAL\LiquidadorIncapacidades.DAL.csproj">
+      <Project>{c4b0d1e3-3275-4629-aa5f-ece922680dbd}</Project>
+      <Name>LiquidadorIncapacidades.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LiquidadorIncapacidades.Entities\LiquidadorIncapacidades.Entities.csproj">
+      <Project>{3990ed4e-6617-4555-bd40-60f459c0f087}</Project>
+      <Name>LiquidadorIncapacidades.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

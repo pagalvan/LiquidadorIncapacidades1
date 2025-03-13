@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,6 +52,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LiquidadorIncapacidades.BLL\LiquidadorIncapacidades.BLL.csproj">
+      <Project>{946b21b2-5e1d-4451-9fa8-921152945eae}</Project>
+      <Name>LiquidadorIncapacidades.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LiquidadorIncapacidades.Entities\LiquidadorIncapacidades.Entities.csproj">
+      <Project>{3990ed4e-6617-4555-bd40-60f459c0f087}</Project>
+      <Name>LiquidadorIncapacidades.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
